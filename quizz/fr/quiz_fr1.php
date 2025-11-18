@@ -9,17 +9,9 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-
-    <header class="bg-white border-bottom border-secondary-subtle">
-        <div class="container-fluid d-flex align-items-center justify-content-between gap-2 flex-wrap py-2 px-3">
-            <a href="../../index.php" class="d-flex align-items-center text-decoration-none text-body gap-2">
-                <img src="../../imgs/logo.png" alt="Logo Polyglot Play" class="logo-img">
-                <h1 class="brand-title fw-bold">Polyglot Play</h1>
-            </a>
-
-            <a href="../../login.php" class="btn btn-primary rounded-3 px-3">Login</a>
-        </div>
-    </header>
+  <?php 
+    require('../../includes/nav.php');
+  ?>
 
   <main class="quiz container my-3">
     <div class="card p-3 mx-auto" style="max-width:760px;border-color:#ccc">
@@ -94,22 +86,24 @@
   <?php 
     require('../../includes/footer.php');
   ?>
-  <script>
+   <script>
     (() => {
       const form = document.getElementById('quiz');
       const result = document.getElementById('result');
       const next = document.getElementById('nextQuiz');
 
-      const normalize = s => (s||'')
+      const normalize = s => (s || '')
         .toLowerCase().trim()
-        .normalize('NFD').replace(/[\u0300-\u036f]/g,'')     
-        .replace(/[?!.,;:()\/\[\]{}"’‘«»]+/g,' ')           
-        .replace(/\s+/g,' ');
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')   
+        .replace(/[?!.,;:()\/\[\]{}"’‘«»]+/g, ' ')          
+        .replace(/\s+/g, ' ');                              
 
       const show = (fs, ok, rightText) => {
         const fb = fs.querySelector('.feedback');
         fb.hidden = false;
-        fb.textContent = ok ? '✔️ Correto!' : (rightText ? `❌ Resposta certa: ${rightText}` : '❌ Errado.');
+        fb.textContent = ok
+          ? '✔️ Correto!'
+          : (rightText ? `❌ Resposta certa: ${rightText}` : '❌ Errado.');
         fb.classList.toggle('text-success', ok);
         fb.classList.toggle('text-danger', !ok);
       };
@@ -120,8 +114,8 @@
 
         form.querySelectorAll('fieldset').forEach(fs => {
           total++;
-          const ok = fs.dataset.correct;
-          const txt = fs.dataset.answerText;
+          const ok = fs.dataset.correct;       
+          const txt = fs.dataset.answerText;   
           let good = false;
 
           if (ok) {
@@ -130,8 +124,9 @@
           } else if (txt) {
             const typed = normalize(fs.querySelector('input[type="text"]')?.value);
             good = normalize(txt) === typed;
-            show(fs, good, 'Comment ça va ?');
+            show(fs, good, txt);
           }
+
           if (good) score++;
         });
 
@@ -142,7 +137,9 @@
       document.getElementById('limpar').addEventListener('click', () => {
         form.reset();
         form.querySelectorAll('.feedback').forEach(fb => {
-          fb.hidden = true; fb.textContent = ''; fb.classList.remove('text-success','text-danger');
+          fb.hidden = true;
+          fb.textContent = '';
+          fb.classList.remove('text-success','text-danger');
         });
         result.textContent = '';
         next.hidden = true;

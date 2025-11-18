@@ -15,56 +15,51 @@
 
   <main class="quiz container my-3">
     <div class="card p-3 mx-auto" style="max-width:760px;border-color:#ccc">
-      <h1 class="fs-4 mb-2">QUIZZ 1 – Espanhol (A1)</h1>
+      <h1 class="fs-4 mb-2">QUIZZ 2 – Espanhol (A2)</h1>
       <p class="lead mb-3">Responde às 5 questões. No fim, clica em <strong>Verificar</strong> para veres a pontuação.</p>
 
       <form id="quiz" novalidate>
-        <fieldset data-q="1" data-correct="a">
-          <div class="q-title">1) “Buenos días” significa:</div>
+        <fieldset data-q="1" data-answer-text="Eu vou ao supermercado.">
+          <div class="q-title">1) Traduzir para português: <em>“Voy al supermercado.”</em></div>
+          <input type="text" name="q1" class="form-control mt-1" placeholder="Escreve aqui a tradução em português">
+          <div class="feedback text-body-tertiary" hidden></div>
+        </fieldset>
+
+        <fieldset data-q="2" data-correct="a">
+          <div class="q-title mt-3">2) Completar a frase: <em>Nosotros ___ fútbol todos los domingos.</em></div>
           <div class="vstack gap-1 mt-1">
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q1" value="a">a) Bom dia</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q1" value="b">b) Boa tarde</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q1" value="c">c) Boa noite</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q1" value="d">d) Adeus</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="a">a) jugamos</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="b">b) juegan</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="c">c) juega</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="d">d) jugar</label>
           </div>
           <div class="feedback text-body-tertiary" hidden></div>
         </fieldset>
 
-        <fieldset data-q="2" data-correct="b">
-          <div class="q-title mt-3">2) Completar a frase: <em>Yo ___ un estudiante.</em></div>
+        <fieldset data-q="3" data-correct="a">
+          <div class="q-title mt-3">3) “¿Qué hora es?” significa:</div>
           <div class="vstack gap-1 mt-1">
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="a">a) eres</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="b">b) soy</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="c">c) es</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="d">d) está</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q3" value="a">a) Que horas são?</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q3" value="b">b) Onde estás?</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q3" value="c">c) Como estás?</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q3" value="d">d) Que dia é hoje?</label>
           </div>
           <div class="feedback text-body-tertiary" hidden></div>
         </fieldset>
 
-        <fieldset data-q="3" data-answer-text="como estas">
-          <div class="q-title mt-3">3) Traduzir para espanhol: <em>“Como estás?”</em></div>
-          <input type="text" name="q3" class="form-control mt-1" placeholder="Escreve aqui a tradução">
+        <fieldset data-q="4" data-answer-text="Me gusta el café.">
+          <div class="q-title mt-3">4) Traduzir para espanhol: <em>“Eu gosto de café.”</em></div>
+          <input type="text" name="q4" class="form-control mt-1" placeholder="Escreve aqui a tradução em espanhol">
           <div class="feedback text-body-tertiary" hidden></div>
         </fieldset>
 
-        <fieldset data-q="4" data-correct="a">
-          <div class="q-title mt-3">4) “Gracias” quer dizer:</div>
+        <fieldset data-q="5" data-correct="b">
+          <div class="q-title mt-3">5) Completar a frase: <em>Ellos ___ muy contentos hoje.</em></div>
           <div class="vstack gap-1 mt-1">
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q4" value="a">a) Obrigado</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q4" value="b">b) Por favor</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q4" value="c">c) Desculpa</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q4" value="d">d) Olá</label>
-          </div>
-          <div class="feedback text-body-tertiary" hidden></div>
-        </fieldset>
-
-        <fieldset data-q="5" data-correct="a">
-          <div class="q-title mt-3">5) Completar a frase: <em>Ella ___ un gato.</em></div>
-          <div class="vstack gap-1 mt-1">
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="a">a) tiene</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="b">b) tengo</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="c">c) tener</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="d">d) tienes</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="a">a) es</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="b">b) están</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="c">c) está</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="d">d) sois</label>
           </div>
           <div class="feedback text-body-tertiary" hidden></div>
         </fieldset>
@@ -78,7 +73,7 @@
 
         <div class="next-quiz" id="nextQuiz" hidden>
           <p class="mb-2 fw-bold">Conseguiste!<br>Pronto para um novo desafio?</p>
-          <a href="quiz_es2.php" class="btn btn-outline-dark">Ir para o próximo quizz</a>
+          <a href="quiz_es3.php" class="btn btn-outline-dark">Ir para o próximo quizz</a>
         </div>
       </form>
     </div>
@@ -122,7 +117,7 @@
           } else if (txt) {
             const typed = clean(fs.querySelector('input[type="text"]')?.value);
             good = typed === clean(txt);
-            show(fs, good, '¿Cómo estás?');
+            show(fs, good, txt);
           }
           if (good) score++;
         });

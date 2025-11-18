@@ -9,16 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="bg-white border-bottom border-secondary-subtle">
-        <div class="container-fluid d-flex align-items-center justify-content-between gap-2 flex-wrap py-2 px-3">
-            <a href="index.php" class="d-flex align-items-center text-decoration-none text-body gap-2">
-                <img src="imgs/logo.png" alt="Logo Polyglot Play" class="logo-img">
-                <h1 class="brand-title fw-bold">Polyglot Play</h1>
-            </a>
-
-            <a href="login.php" class="btn btn-primary rounded-3 px-3">Login</a>
-        </div>
-    </header>
+    <?php 
+        require('includes/nav.php');
+    ?>
 
     <main class="container py-5 text-left">
         <!---INTRO--->
@@ -32,7 +25,7 @@
                 sessões de 5 minutos e vê a tua evolução.
                 </p>
                 <div class="d-flex flex-wrap gap-3">
-                    <a href="#idiomas" class="btn btn-primary btn-lg rounded-3 px-3">Começar agora</a>
+                    <a href="quizzes.php" class="btn btn-primary btn-lg rounded-3 px-3">Começar agora</a>
                 </div>
             </div>
 
@@ -104,7 +97,7 @@
         <!---HIGHLIGHT--->
         <section class="stats-highlight py-4">
             <div class="container">
-                <div class="bg-warning rounded-pill px-4 py-3 shadow-pill">
+                <div class="bg-warning rounded-pill px-4 py-3">
                     <div class="row text-center align-items-center g-3">
                         <div class="col-12 col-md-4">
                             <div class="h5 fw-semibold mt-2">Múltiplos dispositivos</div>
@@ -132,7 +125,7 @@
                     <div class="col">
                         <div class="card h-100 p-3">
                             <h5 class="fw-bold mb-2">Escolhe um quiz</h5>
-                            <p class="mb-0 text-secondary">Abre um dos idiomas acima e começa com perguntas simples.</p>
+                            <p class="mb-0 text-secondary">Abre um dos idiomas e começa com perguntas simples.</p>
                         </div>
                     </div>
                     <div class="col">
@@ -157,18 +150,18 @@
             <p class="text-secondary mb-4">Clica num cartão para abrir o quiz desse idioma.</p>
 
             <div class="d-flex flex-wrap justify-content-center gap-5">
-            <a href="quizz/uk/quiz_uk1.php" class="lang-card text-decoration-none text-reset">
-                <div class="flag" style="background-image:url('imgs/uk.png');"></div><p>Inglês</p>
-            </a>
-            <a href="quizz/fr/quiz_fr1.php" class="lang-card text-decoration-none text-reset">
-                <div class="flag" style="background-image:url('imgs/fr.png');"></div><p>Francês</p>
-            </a>
-            <a href="quizz/es/quiz_es1.php" class="lang-card text-decoration-none text-reset">
-                <div class="flag" style="background-image:url('imgs/es.png');"></div><p>Espanhol</p>
-            </a>
-            <a href="quizz/al/quiz_al1.php" class="lang-card text-decoration-none text-reset">
-                <div class="flag" style="background-image:url('imgs/al.png');"></div><p>Alemão</p>
-            </a>
+                <a href="quizzes.php" class="lang-card text-decoration-none text-reset">
+                    <div class="flag" style="background-image:url('imgs/uk.png');"></div><p>Inglês</p>
+                </a>
+                <a href="quizzes.php" class="lang-card text-decoration-none text-reset">
+                    <div class="flag" style="background-image:url('imgs/fr.png');"></div><p>Francês</p>
+                </a>
+                <a href="quizzes.php" class="lang-card text-decoration-none text-reset">
+                    <div class="flag" style="background-image:url('imgs/es.png');"></div><p>Espanhol</p>
+                </a>
+                <a href="quizzes.php" class="lang-card text-decoration-none text-reset">
+                    <div class="flag" style="background-image:url('imgs/al.png');"></div><p>Alemão</p>
+                </a>
             </div>
         </section>
 

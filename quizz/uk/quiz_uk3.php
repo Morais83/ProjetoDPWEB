@@ -9,17 +9,9 @@
     <link rel="stylesheet" href="../../css/style.css">
 </head>
 <body>
-
-    <header class="bg-white border-bottom border-secondary-subtle">
-        <div class="container-fluid d-flex align-items-center justify-content-between gap-2 flex-wrap py-2 px-3">
-            <a href="../../index.php" class="d-flex align-items-center text-decoration-none text-body gap-2">
-                <img src="../../imgs/logo.png" alt="Logo Polyglot Play" class="logo-img">
-                <h1 class="brand-title fw-bold">Polyglot Play</h1>
-            </a>
-
-            <a href="../../login.php" class="btn btn-primary rounded-3 px-3">Login</a>
-        </div>
-    </header>
+    <?php 
+        require('../../includes/nav.php');
+    ?>
 
     <main class="quiz container my-3">
         <div class="card p-3 mx-auto" style="max-width:760px;border-color:#ccc">

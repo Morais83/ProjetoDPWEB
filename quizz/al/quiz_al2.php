@@ -15,56 +15,51 @@
 
   <main class="quiz container my-3">
     <div class="card p-3 mx-auto" style="max-width:760px;border-color:#ccc">
-      <h1 class="fs-4 mb-2">QUIZZ 1 – Alemão (A1)</h1>
+      <h1 class="fs-4 mb-2">QUIZZ 2 – Alemão (A2)</h1>
       <p class="lead mb-3">Responde às 5 questões. No fim, clica em <strong>Verificar</strong> para veres a pontuação.</p>
 
       <form id="quiz" novalidate>
-        <fieldset data-q="1" data-correct="a">
-          <div class="q-title">1) “Guten Morgen” significa:</div>
+        <fieldset data-q="1" data-answer-text="Eu vou à escola.">
+          <div class="q-title">1) Traduzir para português: <em>“Ich gehe in die Schule.”</em></div>
+          <input type="text" name="q1" class="form-control mt-1" placeholder="Escreve aqui a tradução em português">
+          <div class="feedback text-body-tertiary" hidden></div>
+        </fieldset>
+
+        <fieldset data-q="2" data-correct="c">
+          <div class="q-title mt-3">2) Completar a frase: <em>Wir ___ jeden Tag Brot.</em></div>
           <div class="vstack gap-1 mt-1">
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q1" value="a">a) Bom dia</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q1" value="b">b) Boa noite</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q1" value="c">c) Boa tarde</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q1" value="d">d) Adeus</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="a">a) esse</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="b">b) esst</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="c">c) essen</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="d">d) isst</label>
           </div>
           <div class="feedback text-body-tertiary" hidden></div>
         </fieldset>
 
-        <fieldset data-q="2" data-correct="b">
-          <div class="q-title mt-3">2) Completar a frase: <em>Ich ___ Maria.</em></div>
+        <fieldset data-q="3" data-correct="a">
+          <div class="q-title mt-3">3) “Wie spät ist es?” significa:</div>
           <div class="vstack gap-1 mt-1">
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="a">a) ist</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="b">b) bin</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="c">c) bist</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q2" value="d">d) seid</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q3" value="a">a) Que horas são?</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q3" value="b">b) Onde estás?</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q3" value="c">c) Como estás?</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q3" value="d">d) Que dia é hoje?</label>
           </div>
           <div class="feedback text-body-tertiary" hidden></div>
         </fieldset>
 
-        <fieldset data-q="3" data-answer-text="wie geht es dir?">
-          <div class="q-title mt-3">3) Traduzir para alemão: <em>“Como estás?”</em></div>
-          <input type="text" name="q3" class="form-control mt-1" placeholder="Escreve aqui a tradução">
-          <div class="feedback text-body-tertiary" hidden></div>
-        </fieldset>
-
-        <fieldset data-q="4" data-correct="a">
-          <div class="q-title mt-3">4) “Danke schön” quer dizer:</div>
-          <div class="vstack gap-1 mt-1">
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q4" value="a">a) Muito obrigado</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q4" value="b">b) Por favor</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q4" value="c">c) De nada</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q4" value="d">d) Até logo</label>
-          </div>
+        <fieldset data-q="4" data-answer-text="Ich mag Musik.">
+          <div class="q-title mt-3">4) Traduzir para alemão: <em>“Eu gosto de música.”</em></div>
+          <input type="text" name="q4" class="form-control mt-1" placeholder="Escreve aqui a tradução em alemão">
           <div class="feedback text-body-tertiary" hidden></div>
         </fieldset>
 
         <fieldset data-q="5" data-correct="a">
-          <div class="q-title mt-3">5) Completar a frase: <em>Er ___ einen Hund.</em></div>
+          <div class="q-title mt-3">5) Completar a frase: <em>Sie ___ sehr glücklich heute.</em></div>
           <div class="vstack gap-1 mt-1">
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="a">a) hat</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="b">b) habe</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="c">c) haben</label>
-            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="d">d) bist</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="a">a) sind</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="b">b) bist</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="c">c) ist</label>
+            <label class="opt d-flex align-items-center gap-2 border rounded-1 p-2"><input type="radio" name="q5" value="d">d) bin</label>
           </div>
           <div class="feedback text-body-tertiary" hidden></div>
         </fieldset>
@@ -78,20 +73,22 @@
 
         <div class="next-quiz" id="nextQuiz" hidden>
           <p class="mb-2 fw-bold">Conseguiste!<br>Pronto para um novo desafio?</p>
-          <a href="quiz_al2.php" class="btn btn-outline-dark">Ir para o próximo quizz</a>
+          <a href="quiz_al3.php" class="btn btn-outline-dark">Ir para o próximo quizz</a>
         </div>
       </form>
     </div>
   </main>
+
   <?php 
     require('../../includes/footer.php');
   ?>
+
   <script>
     (() => {
       const form = document.getElementById('quiz');
       const result = document.getElementById('result');
       const next = document.getElementById('nextQuiz');
-      const clean = s => s.trim().toLowerCase().replace(/\s+/g,' ');
+      const clean = s => (s || '').trim().toLowerCase().replace(/\s+/g,' ');
 
       const show = (fs, ok, rightText) => {
         const fb = fs.querySelector('.feedback');
@@ -116,8 +113,8 @@
             show(fs, good);
           } else if (txt) {
             const typed = clean(fs.querySelector('input[type="text"]')?.value || '');
-            good = typed === txt.toLowerCase();
-            show(fs, good, 'Wie geht es dir?');
+            good = typed === clean(txt);
+            show(fs, good, txt);
           }
           if (good) score++;
         });
@@ -136,6 +133,7 @@
       });
     })();
   </script>
+
   <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>

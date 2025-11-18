@@ -9,15 +9,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <header class="bg-white border-bottom border-secondary-subtle">
-        <div class="container-fluid d-flex align-items-center justify-content-between gap-2 flex-wrap py-2 px-3">
-            <a href="index.php" class="d-flex align-items-center text-decoration-none text-body gap-2">
-                <img src="imgs/logo.png" alt="Logo Polyglot Play" class="logo-img">
-                <h1 class="brand-title fw-bold">Polyglot Play</h1>
-            </a>
-        </div>
-    </header>
+    <?php 
+        $hideLoginButton = true;
+        require('includes/nav.php');
+    ?>
 
     <main class="center-area py-4">
         <div class="container">
