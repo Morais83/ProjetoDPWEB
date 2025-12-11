@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polyglot Play - Aprende Espanhol</title>
+    <title>Polyglot Play - Aprende Inglês</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -22,7 +22,8 @@
         <section class="row align-items-center g-4 mb-5">
             <div class="col-lg-7">
                 <h1 class="display-5 fw-bold lh-tight mb-3">
-                    Aprende Espanhol passo a passo:
+                    Aprende Inglês passo a passo:
+                    <br>
                     básico, intermédio e avançado.
                 </h1>
                 <p class="text-secondary mb-4">
@@ -66,7 +67,6 @@
                 <div class="col-md-8">
                     <div class="tab-content" id="level-tabsContent">
 
-                        <!-- NÍVEL BÁSICO -->
                         <div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab" tabindex="0">
                             <div class="card border-0 p-4 mb-3">
                                 <h2 class="h4 fw-bold mb-3">Nível Básico – Começar do zero</h2>
@@ -79,17 +79,17 @@
                                     <div class="col-sm-6">
                                         <h3 class="h6 text-uppercase text-muted mb-2">Cumprimentos</h3>
                                         <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">¡Hola!</span> – Olá!</li>
-                                            <li><span class="phrase-example">¡Buenos días!</span> – Bom dia!</li>
-                                            <li><span class="phrase-example">¡Buenas noches!</span> – Boa noite!</li>
+                                            <li><span class="phrase-example">Hello!</span> – Olá!</li>
+                                            <li><span class="phrase-example">Good morning!</span> – Bom dia!</li>
+                                            <li><span class="phrase-example">Good night!</span> – Boa noite!</li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-6">
                                         <h3 class="h6 text-uppercase text-muted mb-2">Apresentações</h3>
                                         <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Me llamo João.</span> – Chamo-me João.</li>
-                                            <li><span class="phrase-example">Soy de Portugal.</span> – Sou de Portugal.</li>
-                                            <li><span class="phrase-example">Encantado / Encantada.</span> – Prazer em conhecer-te.</li>
+                                            <li><span class="phrase-example">My name is João.</span> – O meu nome é João.</li>
+                                            <li><span class="phrase-example">I am from Portugal.</span> – Sou de Portugal.</li>
+                                            <li><span class="phrase-example">Nice to meet you.</span> – Prazer em conhecer-te.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -98,10 +98,10 @@
 
                                 <p class="small mb-1 fw-semibold">Vocabulário essencial:</p>
                                 <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-light">los números · números</span>
-                                    <span class="badge text-bg-light">los días de la semana · dias da semana</span>
-                                    <span class="badge text-bg-light">la comida · comida</span>
-                                    <span class="badge text-bg-light">la familia · família</span>
+                                    <span class="badge text-bg-light">numbers · números</span>
+                                    <span class="badge text-bg-light">days of the week · dias da semana</span>
+                                    <span class="badge text-bg-light">food · comida</span>
+                                    <span class="badge text-bg-light">family · família</span>
                                 </div>
 
                                 <p class="small text-muted mb-0">
@@ -111,7 +111,6 @@
                             </div>
                         </div>
 
-                        <!-- NÍVEL INTERMÉDIO -->
                         <div class="tab-pane fade" id="intermediate" role="tabpanel" aria-labelledby="intermediate-tab" tabindex="0">
                             <div class="card border-0 p-4 mb-3">
                                 <h2 class="h4 fw-bold mb-3">Nível Intermédio – Ganhar confiança</h2>
@@ -124,17 +123,17 @@
                                     <div class="col-sm-6">
                                         <h3 class="h6 text-uppercase text-muted mb-2">Falar da rotina</h3>
                                         <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Me despierto a las 7.</span> – Acordo às 7h.</li>
-                                            <li><span class="phrase-example">Voy al trabajo en autobús.</span> – Vou para o trabalho de autocarro.</li>
-                                            <li><span class="phrase-example">Estudio español todos los días.</span> – Estudo Espanhol todos os dias.</li>
+                                            <li><span class="phrase-example">I wake up at 7 a.m.</span> – Acordo às 7h.</li>
+                                            <li><span class="phrase-example">I go to work by bus.</span> – Vou para o trabalho de autocarro.</li>
+                                            <li><span class="phrase-example">I study English every day.</span> – Estudo Inglês todos os dias.</li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-6">
                                         <h3 class="h6 text-uppercase text-muted mb-2">Fazer perguntas</h3>
                                         <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">¿A qué te dedicas?</span> – O que fazes (profissão)?</li>
-                                            <li><span class="phrase-example">¿Dónde vives?</span> – Onde vives?</li>
-                                            <li><span class="phrase-example">¿Cómo fue tu día?</span> – Como foi o teu dia?</li>
+                                            <li><span class="phrase-example">What do you do?</span> – O que fazes (profissão)?</li>
+                                            <li><span class="phrase-example">Where do you live?</span> – Onde vives?</li>
+                                            <li><span class="phrase-example">How was your day?</span> – Como foi o teu dia?</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -143,10 +142,10 @@
 
                                 <p class="small mb-1 fw-semibold">Gramática que deves rever:</p>
                                 <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-light">Presente de indicativo</span>
-                                    <span class="badge text-bg-light">Pretérito perfecto / indefinido</span>
-                                    <span class="badge text-bg-light">Hay / No hay</span>
-                                    <span class="badge text-bg-light">Artigos definidos e indefinidos</span>
+                                    <span class="badge text-bg-light">Present Simple</span>
+                                    <span class="badge text-bg-light">Past Simple</span>
+                                    <span class="badge text-bg-light">There is / There are</span>
+                                    <span class="badge text-bg-light">Some / Any</span>
                                 </div>
 
                                 <p class="small text-muted mb-0">
@@ -156,12 +155,11 @@
                             </div>
                         </div>
 
-                        <!-- NÍVEL AVANÇADO -->
                         <div class="tab-pane fade" id="advanced" role="tabpanel" aria-labelledby="advanced-tab" tabindex="0">
                             <div class="card border-0 p-4 mb-3">
                                 <h2 class="h4 fw-bold mb-3">Nível Avançado – Soar mais natural</h2>
                                 <p class="text-secondary mb-3">
-                                    Neste nível o objetivo é deixar o espanhol mais fluido e natural,
+                                    Neste nível o objetivo é deixar o inglês mais fluido e natural,
                                     com expressões, conectores e frases mais complexas.
                                 </p>
 
@@ -169,17 +167,17 @@
                                     <div class="col-sm-6">
                                         <h3 class="h6 text-uppercase text-muted mb-2">Expressões úteis</h3>
                                         <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Para ser sincero...</span> – Para ser sincero...</li>
-                                            <li><span class="phrase-example">Depende.</span> – Depende.</li>
-                                            <li><span class="phrase-example">Tengo muchas ganas.</span> – Estou ansioso por isso.</li>
+                                            <li><span class="phrase-example">To be honest...</span> – Para ser sincero...</li>
+                                            <li><span class="phrase-example">It depends.</span> – Depende.</li>
+                                            <li><span class="phrase-example">I'm looking forward to it.</span> – Estou ansioso por isso.</li>
                                         </ul>
                                     </div>
                                     <div class="col-sm-6">
                                         <h3 class="h6 text-uppercase text-muted mb-2">Ligar ideias</h3>
                                         <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Sin embargo,</span> – No entanto,</li>
-                                            <li><span class="phrase-example">Por otro lado,</span> – Por outro lado,</li>
-                                            <li><span class="phrase-example">En mi opinión,</span> – Na minha opinião,</li>
+                                            <li><span class="phrase-example">However,</span> – No entanto,</li>
+                                            <li><span class="phrase-example">On the other hand,</span> – Por outro lado,</li>
+                                            <li><span class="phrase-example">In my opinion,</span> – Na minha opinião,</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -188,15 +186,15 @@
 
                                 <p class="small mb-1 fw-semibold">O que deves praticar mais:</p>
                                 <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-light">Listening com séries / vídeos em espanhol</span>
+                                    <span class="badge text-bg-light">Listening com séries / vídeos</span>
                                     <span class="badge text-bg-light">Writing de pequenos textos</span>
                                     <span class="badge text-bg-light">Vocabulário de temas específicos</span>
                                 </div>
 
                                 <p class="small text-muted mb-0">
-                                    Dica: tenta explicar uma opinião tua em espanhol (sobre um filme, jogo,
-                                    escola, etc.) usando conectores como <em>sin embargo</em>, <em>porque</em>,
-                                    <em>aunque</em>.
+                                    Dica: tenta explicar uma opinião tua em inglês (sobre um filme, jogo,
+                                    escola, etc.) usando conectores como <em>however</em>, <em>because</em>,
+                                    <em>although</em>.
                                 </p>
                             </div>
                         </div>
@@ -222,8 +220,8 @@
                     <div class="card p-3 h-100">
                         <h3 class="h6 fw-bold mb-2">2. Usa frases, não só palavras</h3>
                         <p class="small text-secondary mb-0">
-                            Em vez de decorar só um verbo, decora a frase:
-                            <span class="phrase-example">Voy a la escuela en autobús.</span>
+                            Em vez de decorar só “to go”, decora a frase:
+                            <span class="phrase-example">I go to school by bus.</span>
                             Vais lembrar melhor o significado e a estrutura.
                         </p>
                     </div>
@@ -245,10 +243,10 @@
                 <h2 class="h4 fw-bold mb-2">Pronto para praticar?</h2>
                 <p class="text-secondary mb-3">
                     Agora que já tens uma visão geral dos níveis, é hora de pôr em prática
-                    com os quizzes de Espanhol do Polyglot Play.
+                    com os quizzes de Inglês do Polyglot Play.
                 </p>
-                <a href="../quizz/es/quiz_es1.php" class="btn btn-primary btn-lg rounded-3 px-4">
-                    Ir para os quizzes de Espanhol
+                <a href="../quizz/uk/quiz_uk1.php" class="btn btn-primary btn-lg rounded-3 px-4">
+                    Ir para os quizzes de Inglês
                 </a>
             </div>
         </section>

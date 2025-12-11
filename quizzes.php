@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos os quizzes - Polyglot Play</title>
+    <title>Polyglot Play - Todos os quizzes</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php 
-        require('includes/nav.php');
+    <?php
+        define('PROJECT_ROOT', dirname(__FILE__)); 
+        $BASE_URL = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
+        if ($BASE_URL === '//') {
+            $BASE_URL = '/'; 
+        }
+        require_once(PROJECT_ROOT . '/includes/nav.php');
     ?>
 
     <main class="container py-5">
@@ -44,11 +49,11 @@
                     </button>
                     <div class="dropdown-menu quiz-dropdown-menu p-2 shadow-sm">
                         <p class="text-secondary small mb-2 text-center">Escolhe a dificuldade</p>
-                        <a href="quizz/uk/quiz_uk1.php" class="dropdown-item text-center small">Inglês A1</a>
-                        <a href="quizz/uk/quiz_uk2.php" class="dropdown-item text-center small">Inglês A2</a>
-                        <a href="quizz/uk/quiz_uk3.php" class="dropdown-item text-center small">Inglês B1</a>
-                        <a href="quizz/uk/quiz_uk4.php" class="dropdown-item text-center small">Inglês B2</a>
-                        <a href="quizz/uk/quiz_uk5.php" class="dropdown-item text-center small">Inglês C1</a>
+                        <a href="quizz/quiz_en1.php" class="dropdown-item text-center small">Inglês A1</a>
+                        <a href="quizz/quiz_en2.php" class="dropdown-item text-center small">Inglês A2</a>
+                        <a href="quizz/quiz_en3.php" class="dropdown-item text-center small">Inglês B1</a>
+                        <a href="quizz/quiz_en4.php" class="dropdown-item text-center small">Inglês B2</a>
+                        <a href="quizz/quiz_en5.php" class="dropdown-item text-center small">Inglês C1</a>
                     </div>
                 </div>
 
@@ -64,11 +69,11 @@
                     </button>
                     <div class="dropdown-menu quiz-dropdown-menu p-2 shadow-sm">
                         <p class="text-secondary small mb-2 text-center">Escolhe a dificuldade</p>
-                        <a href="quizz/fr/quiz_fr1.php" class="dropdown-item text-center small">Francês A1</a>
-                        <a href="quizz/fr/quiz_fr2.php" class="dropdown-item text-center small">Francês A2</a>
-                        <a href="quizz/fr/quiz_fr3.php" class="dropdown-item text-center small">Francês B1</a>
-                        <a href="quizz/fr/quiz_fr4.php" class="dropdown-item text-center small">Francês B2</a>
-                        <a href="quizz/fr/quiz_fr5.php" class="dropdown-item text-center small">Francês C1</a>
+                        <a href="quizz/quiz_fr1.php" class="dropdown-item text-center small">Francês A1</a>
+                        <a href="quizz/quiz_fr2.php" class="dropdown-item text-center small">Francês A2</a>
+                        <a href="quizz/quiz_fr3.php" class="dropdown-item text-center small">Francês B1</a>
+                        <a href="quizz/quiz_fr4.php" class="dropdown-item text-center small">Francês B2</a>
+                        <a href="quizz/quiz_fr5.php" class="dropdown-item text-center small">Francês C1</a>
                     </div>
                 </div>
 
@@ -84,11 +89,11 @@
                     </button>
                     <div class="dropdown-menu quiz-dropdown-menu p-2 shadow-sm">
                         <p class="text-secondary small mb-2 text-center">Escolhe a dificuldade</p>
-                        <a href="quizz/es/quiz_es1.php" class="dropdown-item text-center small">Espanhol A1</a>
-                        <a href="quizz/es/quiz_es2.php" class="dropdown-item text-center small">Espanhol A2</a>
-                        <a href="quizz/es/quiz_es3.php" class="dropdown-item text-center small">Espanhol B1</a>
-                        <a href="quizz/es/quiz_es4.php" class="dropdown-item text-center small">Espanhol B2</a>
-                        <a href="quizz/es/quiz_es5.php" class="dropdown-item text-center small">Espanhol C1</a>
+                        <a href="quizz/quiz_es1.php" class="dropdown-item text-center small">Espanhol A1</a>
+                        <a href="quizz/quiz_es2.php" class="dropdown-item text-center small">Espanhol A2</a>
+                        <a href="quizz/quiz_es3.php" class="dropdown-item text-center small">Espanhol B1</a>
+                        <a href="quizz/quiz_es4.php" class="dropdown-item text-center small">Espanhol B2</a>
+                        <a href="quizz/quiz_es5.php" class="dropdown-item text-center small">Espanhol C1</a>
                     </div>
                 </div>
 
@@ -104,11 +109,11 @@
                     </button>
                     <div class="dropdown-menu quiz-dropdown-menu p-2 shadow-sm">
                         <p class="text-secondary small mb-2 text-center">Escolhe a dificuldade</p>
-                        <a href="quizz/al/quiz_al1.php" class="dropdown-item text-center small">Alemão A1</a>
-                        <a href="quizz/al/quiz_al2.php" class="dropdown-item text-center small">Alemão A2</a>
-                        <a href="quizz/al/quiz_al3.php" class="dropdown-item text-center small">Alemão B1</a>
-                        <a href="quizz/al/quiz_al4.php" class="dropdown-item text-center small">Alemão B2</a>
-                        <a href="quizz/al/quiz_al5.php" class="dropdown-item text-center small">Alemão C1</a>
+                        <a href="quizz/quiz_al1.php" class="dropdown-item text-center small">Alemão A1</a>
+                        <a href="quizz/quiz_al2.php" class="dropdown-item text-center small">Alemão A2</a>
+                        <a href="quizz/quiz_al3.php" class="dropdown-item text-center small">Alemão B1</a>
+                        <a href="quizz/quiz_al4.php" class="dropdown-item text-center small">Alemão B2</a>
+                        <a href="quizz/quiz_al5.php" class="dropdown-item text-center small">Alemão C1</a>
                     </div>
                 </div>
 
