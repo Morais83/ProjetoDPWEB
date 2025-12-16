@@ -49,11 +49,11 @@
                     </button>
                     <div class="dropdown-menu quiz-dropdown-menu p-2 shadow-sm">
                         <p class="text-secondary small mb-2 text-center">Escolhe a dificuldade</p>
-                        <a href="quizz/quiz_en1.php" class="dropdown-item text-center small">Inglês A1</a>
-                        <a href="quizz/quiz_en2.php" class="dropdown-item text-center small">Inglês A2</a>
-                        <a href="quizz/quiz_en3.php" class="dropdown-item text-center small">Inglês B1</a>
-                        <a href="quizz/quiz_en4.php" class="dropdown-item text-center small">Inglês B2</a>
-                        <a href="quizz/quiz_en5.php" class="dropdown-item text-center small">Inglês C1</a>
+                        <a href="jogar.php?idioma=en&nivel=A1" class="dropdown-item text-center small">Inglês A1</a>
+                        <a href="jogar.php?idioma=en&nivel=A2" class="dropdown-item text-center small">Inglês A2</a>
+                        <a href="jogar.php?idioma=en&nivel=B1" class="dropdown-item text-center small">Inglês B1</a>
+                        <a href="jogar.php?idioma=en&nivel=B2" class="dropdown-item text-center small">Inglês B2</a>
+                        <a href="jogar.php?idioma=en&nivel=C1" class="dropdown-item text-center small">Inglês C1</a>
                     </div>
                 </div>
 
@@ -69,11 +69,11 @@
                     </button>
                     <div class="dropdown-menu quiz-dropdown-menu p-2 shadow-sm">
                         <p class="text-secondary small mb-2 text-center">Escolhe a dificuldade</p>
-                        <a href="quizz/quiz_fr1.php" class="dropdown-item text-center small">Francês A1</a>
-                        <a href="quizz/quiz_fr2.php" class="dropdown-item text-center small">Francês A2</a>
-                        <a href="quizz/quiz_fr3.php" class="dropdown-item text-center small">Francês B1</a>
-                        <a href="quizz/quiz_fr4.php" class="dropdown-item text-center small">Francês B2</a>
-                        <a href="quizz/quiz_fr5.php" class="dropdown-item text-center small">Francês C1</a>
+                        <a href="jogar.php?idioma=fr&nivel=A1" class="dropdown-item text-center small">Francês A1</a>
+                        <a href="jogar.php?idioma=fr&nivel=A2" class="dropdown-item text-center small">Francês A2</a>
+                        <a href="jogar.php?idioma=fr&nivel=B1" class="dropdown-item text-center small">Francês B1</a>
+                        <a href="jogar.php?idioma=fr&nivel=B2" class="dropdown-item text-center small">Francês B2</a>
+                        <a href="jogar.php?idioma=fr&nivel=C1" class="dropdown-item text-center small">Francês C1</a>
                     </div>
                 </div>
 
@@ -89,11 +89,11 @@
                     </button>
                     <div class="dropdown-menu quiz-dropdown-menu p-2 shadow-sm">
                         <p class="text-secondary small mb-2 text-center">Escolhe a dificuldade</p>
-                        <a href="quizz/quiz_es1.php" class="dropdown-item text-center small">Espanhol A1</a>
-                        <a href="quizz/quiz_es2.php" class="dropdown-item text-center small">Espanhol A2</a>
-                        <a href="quizz/quiz_es3.php" class="dropdown-item text-center small">Espanhol B1</a>
-                        <a href="quizz/quiz_es4.php" class="dropdown-item text-center small">Espanhol B2</a>
-                        <a href="quizz/quiz_es5.php" class="dropdown-item text-center small">Espanhol C1</a>
+                        <a href="jogar.php?idioma=es&nivel=A1" class="dropdown-item text-center small">Espanhol A1</a>
+                        <a href="jogar.php?idioma=es&nivel=A2" class="dropdown-item text-center small">Espanhol A2</a>
+                        <a href="jogar.php?idioma=es&nivel=B1" class="dropdown-item text-center small">Espanhol B1</a>
+                        <a href="jogar.php?idioma=es&nivel=B2" class="dropdown-item text-center small">Espanhol B2</a>
+                        <a href="jogar.php?idioma=es&nivel=C1" class="dropdown-item text-center small">Espanhol C1</a>
                     </div>
                 </div>
 
@@ -109,11 +109,11 @@
                     </button>
                     <div class="dropdown-menu quiz-dropdown-menu p-2 shadow-sm">
                         <p class="text-secondary small mb-2 text-center">Escolhe a dificuldade</p>
-                        <a href="quizz/quiz_al1.php" class="dropdown-item text-center small">Alemão A1</a>
-                        <a href="quizz/quiz_al2.php" class="dropdown-item text-center small">Alemão A2</a>
-                        <a href="quizz/quiz_al3.php" class="dropdown-item text-center small">Alemão B1</a>
-                        <a href="quizz/quiz_al4.php" class="dropdown-item text-center small">Alemão B2</a>
-                        <a href="quizz/quiz_al5.php" class="dropdown-item text-center small">Alemão C1</a>
+                        <a href="jogar.php?idioma=al&nivel=A1" class="dropdown-item text-center small">Alemão A1</a>
+                        <a href="jogar.php?idioma=al&nivel=A2" class="dropdown-item text-center small">Alemão A2</a>
+                        <a href="jogar.php?idioma=al&nivel=B1" class="dropdown-item text-center small">Alemão B1</a>
+                        <a href="jogar.php?idioma=al&nivel=B2" class="dropdown-item text-center small">Alemão B2</a>
+                        <a href="jogar.php?idioma=al&nivel=C1" class="dropdown-item text-center small">Alemão C1</a>
                     </div>
                 </div>
 

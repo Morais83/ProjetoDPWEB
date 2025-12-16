@@ -15,6 +15,7 @@
         if ($BASE_URL === '//') {
             $BASE_URL = '/'; 
         }
+        $hideLoginButton = true;
         require_once(PROJECT_ROOT . '/includes/nav.php');
     ?>
 
@@ -23,7 +24,7 @@
       <div class="auth-box mx-auto text-center">
         <h1 class="fw-bold mb-4 lh-sm">Crie a sua conta<br>e comece a aprender<br>de forma divertida!</h1>
 
-        <form action="index.php" method="post">
+        <form action="processa_registo.php" method="post">
           <div class="mb-3 text-start">
             <label for="username" class="form-label fw-semibold">Nome de usuário:</label>
             <input type="text" id="username" name="username"

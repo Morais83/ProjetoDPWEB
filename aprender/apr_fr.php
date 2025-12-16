@@ -247,7 +247,7 @@
                     Agora que já tens uma visão geral dos níveis, é hora de pôr em prática
                     com os quizzes de Francês do Polyglot Play.
                 </p>
-                <a href="../quizz/fr/quiz_fr1.php" class="btn btn-primary btn-lg rounded-3 px-4">
+                <a href="../quizz/quiz_fr1.php" class="btn btn-primary btn-lg rounded-3 px-4">
                     Ir para os quizzes de Francês
                 </a>
             </div>

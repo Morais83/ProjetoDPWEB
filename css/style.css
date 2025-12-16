@@ -1,4 +1,4 @@
-body { 
+body {
   margin: 0; 
   font-family: "Poppins", Arial, sans-serif; 
   background-color: #ffffff; 
@@ -172,4 +172,45 @@ body {
   border-radius: 18px;
   border: 1px solid #e1e5f2;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* ---SOBRE NOS---*/
+.section-title {
+font-weight: 700;
+}
+
+.team-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: .3rem .3rem 0 0;
+}
+
+.bg-light-section {
+  background-color: #f8f9fa;
+}
+
+/* ---ESTRELAS FEEDBACK--- */
+.rating {
+    display: flex;
+    flex-direction: row-reverse; /* ISTO É O QUE INVERTE A ORDEM PARA FICAR CORRETA */
+    justify-content: flex-end;   /* Alinha à esquerda */
+    gap: 5px;
+}
+
+.rating input {
+    display: none; /* ISTO ESCONDE AS BOLINHAS DOS RADIOS */
+}
+
+.rating label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffc107;
 }

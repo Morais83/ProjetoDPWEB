@@ -10,12 +10,16 @@
 </head>
 <body>
     <?php
+        require_once('includes/connection.php');
         define('PROJECT_ROOT', dirname(__FILE__)); 
         $BASE_URL = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
         if ($BASE_URL === '//') {
             $BASE_URL = '/'; 
         }
         require_once(PROJECT_ROOT . '/includes/nav.php');
+        $sql = "SELECT nome, mensagem, classificacao FROM feedback ORDER BY data_submissao DESC LIMIT 9";
+        $stmt = $pdo->query($sql);
+        $feedbacks = $stmt->fetchAll();
     ?>
 
     <main class="container py-5 text-left">
@@ -170,32 +174,112 @@
             </div>
         </section>
 
+        
         <!---TESTEMUNHOS--->
-        <section class="content text-left py-5">
+        <section class="content text-left py-5" id="feedback-area">
             <div class="container">
-                <h2 class="fw-bold mb-4">O que dizem os utilizadores</h2>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100 p-3">
-                            <h6 class="fw-bold mb-1">Ana M.</h6>
-                            <p class="text-secondary mb-0"><i class="bi bi-quote me-1"></i>Aprender inglês nunca foi tão divertido!</p>
-                        </div>
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="fw-bold mb-0">O que dizem os utilizadores</h2>
+                    
+                    <?php if (count($feedbacks) > 0): ?>
+                    <div>
+                        <button class="btn btn-outline-secondary btn-sm rounded-circle me-1" type="button" data-bs-target="#carouselFeedback" data-bs-slide="prev">
+                            <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm rounded-circle" type="button" data-bs-target="#carouselFeedback" data-bs-slide="next">
+                            <i class="bi bi-chevron-right"></i>
+                        </button>
                     </div>
+                    <?php endif; ?>
+                </div>
 
-                    <div class="col">
-                        <div class="card h-100 p-3">
-                            <h6 class="fw-bold mb-1">João P.</h6>
-                            <p class="text-secondary mb-0"><i class="bi bi-quote me-1"></i>Adoro os quizzes curtos, ajudam-me a praticar todos os dias.</p>
-                        </div>
-                    </div>
+                <div id="carouselFeedback" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        
+                        <?php if (count($feedbacks) > 0): ?>
+                            <?php 
+                            $chunks = array_chunk($feedbacks, 3); 
+                            
+                            foreach($chunks as $index => $grupo): 
+                                $activeClass = ($index === 0) ? 'active' : '';
+                            ?>
+                            
+                            <div class="carousel-item <?php echo $activeClass; ?>" data-bs-interval="5000">
+                                <div class="row row-cols-1 row-cols-md-3 g-4">
+                                    
+                                    <?php foreach($grupo as $f): ?>
+                                        <div class="col">
+                                            <div class="card h-100 p-4 shadow-sm border-0 bg-light">
+                                                <div class="mb-3 text-warning">
+                                                    <?php 
+                                                    $estrelas = isset($f['classificacao']) ? (int)$f['classificacao'] : 5;
+                                                    
+                                                    for ($i = 1; $i <= 5; $i++) {
+                                                        if ($i <= $estrelas) {
+                                                            echo '<i class="bi bi-star-fill"></i> ';
+                                                        } else {
+                                                            echo '<i class="bi bi-star text-secondary"></i> ';
+                                                        }
+                                                    }
+                                                    ?>
+                                                </div>
+                                                <p class="text-secondary mb-3 fst-italic">
+                                                    "<?php echo htmlspecialchars($f['mensagem']); ?>"
+                                                </p>
+                                                <h6 class="fw-bold mb-0 text">
+                                                    - <?php echo htmlspecialchars($f['nome']); ?>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    <?php endforeach; ?>
 
-                    <div class="col">
-                        <div class="card h-100 p-3">
-                            <h6 class="fw-bold mb-1">Carla F.</h6>
-                            <p class="text-secondary mb-0"><i class="bi bi-quote me-1"></i>Ganhei consistência com sessões de 5 minutos. Recomendo!</p>
-                        </div>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+
+                        <?php else: ?>
+                            <div class="text-center py-5 text-muted">
+                                <i class="bi bi-chat-square-dots fs-1 mb-3"></i>
+                                <p>Ainda não há opiniões. Sê o primeiro a comentar!</p>
+                            </div>
+                        <?php endif; ?>
+
                     </div>
                 </div>
+                
+                <div class="mt-5 pt-5 border-top text-center">
+                    <h3 class="fw-bold mb-4">Adicione o seu Feedback</h3>
+                    <form id="feedback-form" method="POST" action="processar_feedback.php"> 
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-8">
+                                
+                                <div class="mb-3 text-start">
+                                    <label class="form-label fw-semibold">Nome</label>
+                                    <input type="text" class="form-control bg-light" name="nome" placeholder="Ex: Maria S." required>
+                                </div>
+
+                                <div class="mb-3 text-start">
+                                    <label class="form-label fw-semibold">Classificação</label>
+                                    <div class="rating">
+                                        <input type="radio" name="classificacao" id="star5" value="5"><label for="star5"><i class="bi bi-star-fill"></i></label>
+                                        <input type="radio" name="classificacao" id="star4" value="4"><label for="star4"><i class="bi bi-star-fill"></i></label>
+                                        <input type="radio" name="classificacao" id="star3" value="3"><label for="star3"><i class="bi bi-star-fill"></i></label>
+                                        <input type="radio" name="classificacao" id="star2" value="2"><label for="star2"><i class="bi bi-star-fill"></i></label>
+                                        <input type="radio" name="classificacao" id="star1" value="1"><label for="star1"><i class="bi bi-star-fill"></i></label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 text-start">
+                                    <label class="form-label fw-semibold">Mensagem</label>
+                                    <textarea class="form-control bg-light" name="mensagem" rows="3" placeholder="O que achaste da plataforma?" required></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary px-5 rounded-pill">Enviar Feedback</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </section>
     </main>

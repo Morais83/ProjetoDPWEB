@@ -1,10 +1,35 @@
 <?php
-$isLoggedIn      = true;
-$utilizador      = 'João Silva';
-$email           = 'joao.silva@example.com';
-$quizzestotais   = 12;
-$respostacorreta = 85;
-$respostaerrada  = 15;
+session_start();
+require_once 'includes/connection.php';
+
+// VERIFICAÇÃO DE SEGURANÇA: Se não estiver logado, manda para o login
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
+// Buscar dados do utilizador à base de dados
+$user_id = $_SESSION['user_id'];
+$stmt = $pdo->prepare("SELECT nome_utilizador, email, data_registo FROM utilizadores WHERE id_utilizador = ?");
+$stmt->execute([$user_id]);
+$user_data = $stmt->fetch();
+
+// Se por algum motivo o utilizador não for encontrado
+if (!$user_data) {
+    session_destroy();
+    header("Location: login.php");
+    exit;
+}
+
+// Variáveis para exibir na página
+$utilizador = $user_data['nome_utilizador'];
+$email = $user_data['email'];
+$data_registo = date('d/m/Y', strtotime($user_data['data_registo']));
+
+// (Opcional) Futuramente podes buscar isto à BD se criares uma tabela de resultados
+$quizzestotais   = 0; 
+$respostacorreta = 0;
+$respostaerrada  = 0;
 ?>
 
 <!DOCTYPE html>
@@ -21,100 +46,53 @@ $respostaerrada  = 15;
     <?php
         define('PROJECT_ROOT', dirname(__FILE__)); 
         $BASE_URL = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
-        if ($BASE_URL === '//') {
-            $BASE_URL = '/'; 
-        }
+        if ($BASE_URL === '//') { $BASE_URL = '/'; }
         require_once(PROJECT_ROOT . '/includes/nav.php');
     ?>
 
     <main class="container py-5">
         <section class="row g-4 mb-4">
             <div class="col-lg-4">
-                <div class="card p-4 h-100">
+                <div class="card p-4 h-100 shadow-sm">
                     <div class="d-flex align-items-center mb-3">
                         <div class="me-3">
-                            <i class="bi bi-person-circle" style="font-size: 3rem;"></i>
+                            <i class="bi bi-person-circle" style="font-size: 3rem; color: #0d6efd;"></i>
                         </div>
                         <div>
                             <h1 class="h4 fw-bold mb-1">
                                 Olá, <?php echo htmlspecialchars($utilizador); ?>
                             </h1>
                             <p class="mb-0 text-secondary small">
-                                Utilizador Polyglot Play
+                                Membro Polyglot Play
                             </p>
                         </div>
                     </div>
-                    <p class="mb-1 small"><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
-                    <p class="mb-0 small text-secondary">Conta criada em: 01/01/2025</p>
+                    <hr>
+                    <p class="mb-2 small"><strong>Email:</strong> <?php echo htmlspecialchars($email); ?></p>
+                    <p class="mb-0 small text-secondary">Membro desde: <?php echo $data_registo; ?></p>
+                    
+                    <div class="mt-4">
+                        <a href="logout.php" class="btn btn-outline-danger btn-sm w-100">Terminar Sessão</a>
+                    </div>
                 </div>
             </div>
 
             <div class="col-lg-8">
-                <div class="row g-3">
-                    <div class="col-sm-4">
-                        <div class="card stat-card h-100 p-3 text-center">
-                            <p class="text-uppercase small text-muted mb-1">Quizzes feitos</p>
-                            <div class="h3 fw-bold mb-0">
-                                <?php echo $quizzestotais; ?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="card stat-card h-100 p-3 text-center">
-                            <p class="text-uppercase small text-muted mb-1">Respostas certas</p>
-                            <div class="h3 fw-bold mb-0">
-                                <?php echo $respostacorreta; ?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="card stat-card h-100 p-3 text-center">
-                            <p class="text-uppercase small text-muted mb-1">Respostas erradas</p>
-                            <div class="h3 fw-bold mb-0 text-danger">
-                                <?php echo $respostaerrada; ?>
-                            </div>
-                        </div>
-                    </div>
+                <div class="alert alert-info border-0 rounded-3">
+                    <h4 class="alert-heading h5"><i class="bi bi-info-circle me-2"></i>Bem-vindo ao teu painel!</h4>
+                    <p class="mb-0">Aqui poderás ver o teu progresso em breve. Por enquanto, explora os quizzes disponíveis e diverte-te a aprender!</p>
+                </div>
+                
+                <div class="text-center mt-5">
+                     <a href="quizzes.php" class="btn btn-primary btn-lg rounded-pill px-5 shadow-sm">
+                        <i class="bi bi-play-fill me-2"></i>Jogar Agora
+                    </a>
                 </div>
             </div>
-        </section>
-
-        <section class="mt-4">
-            <h2 class="h5 fw-bold mb-3">Resumo da tua aprendizagem</h2>
-            <p class="text-secondary">
-                Estas estatísticas vão ajudar-te a acompanhar a tua evolução. 
-                Quanto mais quizzes fizeres, mais claro ficas sobre os temas que dominas
-                e aqueles que precisas de rever.
-            </p>
-
-            <ul class="list-group mb-4">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Percentagem de acertos
-                    <span class="fw-semibold">
-                        <?php
-                        $percentagem = $quizzestotais > 0 ? round(($respostacorreta / max(1, $respostacorreta + $respostaerrada)) * 100) : 0;
-                        echo $percentagem . '%';
-                        ?>
-                    </span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Total de perguntas respondidas
-                    <span class="fw-semibold">
-                        <?php echo $respostacorreta + $respostaerrada; ?>
-                    </span>
-                </li>
-            </ul>
-
-            <a href="quizzes.php" class="btn btn-primary rounded-3 px-4">
-                Continuar a praticar quizzes
-            </a>
         </section>
     </main>
 
     <?php require('includes/footer.php'); ?>
-
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

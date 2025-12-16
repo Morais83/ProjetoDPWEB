@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <?php 
-        require('../includes/nav.php');
+    <?php
+        define('PROJECT_ROOT', dirname(dirname(__FILE__))); 
+        $BASE_URL = rtrim(dirname(dirname($_SERVER['SCRIPT_NAME'])), '/') . '/';
+        if ($BASE_URL === '//') {
+            $BASE_URL = '/'; 
+        }
+        require_once(PROJECT_ROOT . '/includes/nav.php');
     ?>
 
   <main class="quiz container my-3">

@@ -247,7 +247,7 @@
                     Agora que já tens uma visão geral dos níveis, é hora de pôr em prática
                     com os quizzes de Espanhol do Polyglot Play.
                 </p>
-                <a href="../quizz/es/quiz_es1.php" class="btn btn-primary btn-lg rounded-3 px-4">
+                <a href="../quizz/quiz_es1.php" class="btn btn-primary btn-lg rounded-3 px-4">
                     Ir para os quizzes de Espanhol
                 </a>
             </div>
