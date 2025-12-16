@@ -9,8 +9,8 @@ if (!isset($BASE_URL)) {
 
 if ($BASE_URL === '//') { $BASE_URL = '/'; }
 
-$isLoggedIn = isset($_SESSION['user_id']);
-$utilizador = isset($_SESSION['username']) ? $_SESSION['username'] : 'Visitante';
+$isLoggedIn = isset($_SESSION['utilizador_id']);
+$utilizador = isset($_SESSION['utilizador']) ? $_SESSION['utilizador'] : 'Visitante';
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
@@ -66,9 +66,9 @@ $utilizador = isset($_SESSION['username']) ? $_SESSION['username'] : 'Visitante'
                                 </a>
                             </li>
                             
-                            <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
+                            <?php if (isset($_SESSION['tipo_utilizador']) && $_SESSION['tipo_utilizador'] === 'admin'): ?>
                             <li>
-                                <a class="dropdown-item" href="<?php echo $BASE_URL; ?>admin/gestquizz.php">
+                                <a class="dropdown-item" href="<?php echo $BASE_URL; ?>admin/gest_quizz.php">
                                     <i class="bi bi-gear me-2"></i>Administração
                                 </a>
                             </li>

@@ -1,4 +1,5 @@
 body {
+  padding-top: 50px;
   margin: 0; 
   font-family: "Poppins", Arial, sans-serif; 
   background-color: #ffffff; 
@@ -94,7 +95,6 @@ body {
 @media (min-width:768px){
   .stats-highlight .divider-md{ border-left:1px solid rgba(0,0,0,.15); }
 }
-
 
 /*---LOGIN E REGISTO---*/
 .center-area {
@@ -193,13 +193,13 @@ font-weight: 700;
 /* ---ESTRELAS FEEDBACK--- */
 .rating {
     display: flex;
-    flex-direction: row-reverse; /* ISTO É O QUE INVERTE A ORDEM PARA FICAR CORRETA */
-    justify-content: flex-end;   /* Alinha à esquerda */
+    flex-direction: row-reverse; 
+    justify-content: flex-end;  
     gap: 5px;
 }
 
 .rating input {
-    display: none; /* ISTO ESCONDE AS BOLINHAS DOS RADIOS */
+    display: none; 
 }
 
 .rating label {

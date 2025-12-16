@@ -7,198 +7,186 @@
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
+    </head>
+<body class="bg-light">
     <?php
         define('PROJECT_ROOT', dirname(dirname(__FILE__))); 
         $BASE_URL = rtrim(dirname(dirname($_SERVER['SCRIPT_NAME'])), '/') . '/';
-        if ($BASE_URL === '//') {
-            $BASE_URL = '/'; 
-        }
+        if ($BASE_URL === '//') { $BASE_URL = '/'; }
         require_once(PROJECT_ROOT . '/includes/nav.php');
     ?>
 
     <main class="container py-5">
-        <section class="row align-items-center g-4 mb-5">
+        <section class="row align-items-center g-5 mb-5">
             <div class="col-lg-7">
-                <h1 class="display-5 fw-bold lh-tight mb-3">
-                    Aprende Alemão passo a passo:
-                    <br>
-                    básico, intermédio e avançado.
+                <h1 class="display-4 fw-bold lh-tight mb-3 text-dark">
+                    Aprende Alemão passo a passo</span>
                 </h1>
-                <p class="text-secondary mb-4">
-                    Vê o essencial de cada nível, aprende frases úteis para o dia a dia
-                    e depois pratica tudo nos quizzes do Polyglot Play.
+                <p class="lead text-secondary mb-4">
+                    Domina o essencial de cada nível. Aprende frases reais para o dia a dia e consolida o conhecimento com os nossos quizzes interativos.
                 </p>
             </div>
 
             <div class="col-lg-5">
-                <div class="learning-highlight p-4 p-md-5 h-100 d-flex flex-column justify-content-center">
-                    <p class="fw-semibold mb-2 text-uppercase small text-muted">
-                        Porque começar já?
-                    </p>
-                    <p><i class="bi bi-dot text-dark"></i>5 a 10 minutos por dia já fazem diferença.</p>
-                    <p><i class="bi bi-dot text-dark"></i>Foca-te em frases reais, não só listas de palavras.</p>
-                    <p><i class="bi bi-dot text-dark"></i>Repetição + quizzes = memorização mais rápida.</p>
-                    <p class="mb-0 small text-muted">
-                        Usa esta página como referência rápida
-                        e volta sempre que precisares de rever.
-                    </p>
+                <div class="card border-0 shadow p-4 bg-white rounded-4">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-lightbulb-fill text-warning me-2"></i>Porquê começar já?</h5>
+                    <ul class="list-unstyled d-grid gap-3 mb-0">
+                        <li class="d-flex align-items-start fs-5">
+                            <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                            <span>5 a 10 minutos por dia.</span>
+                        </li>
+                        <li class="d-flex align-items-start fs-5">
+                            <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                            <span>Foca-te em <strong>frases reais</strong>.</span>
+                        </li>
+                        <li class="d-flex align-items-start fs-5">
+                            <i class="bi bi-check-circle-fill text-success me-2 mt-1"></i>
+                            <span>Memorização rápida.</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="levels" class="content mb-5">
+        <section id="levels" class="mb-5">
             <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="nav flex-column nav-pills gap-2 level-nav" id="level-tabs" role="tablist" aria-orientation="vertical">
-                        <button class="nav-link active" id="basic-tab" data-bs-toggle="pill" data-bs-target="#basic" type="button" role="tab" aria-controls="basic" aria-selected="true">
-                            🟢 Nível Básico
+                <div class="col-md-4 col-lg-3">
+                    <div class="nav flex-column nav-pills gap-2 sticky-top" style="top: 100px; z-index: 1;" id="level-tabs" role="tablist">
+                        <button class="nav-link active rounded-3 shadow-sm text-start p-3 fs-5" id="basic-tab" data-bs-toggle="pill" data-bs-target="#basic" type="button" role="tab">
+                            🟢 Nível Básico (A1/A2)
                         </button>
-                        <button class="nav-link" id="intermediate-tab" data-bs-toggle="pill" data-bs-target="#intermediate" type="button" role="tab" aria-controls="intermediate" aria-selected="false">
-                            🟡 Nível Intermédio
+                        <button class="nav-link rounded-3 shadow-sm text-start p-3 fs-5" id="intermediate-tab" data-bs-toggle="pill" data-bs-target="#intermediate" type="button" role="tab">
+                            🟡 Nível Intermédio (B1/B2)
                         </button>
-                        <button class="nav-link" id="advanced-tab" data-bs-toggle="pill" data-bs-target="#advanced" type="button" role="tab" aria-controls="advanced" aria-selected="false">
-                            🔴 Nível Avançado
+                        <button class="nav-link rounded-3 shadow-sm text-start p-3 fs-5" id="advanced-tab" data-bs-toggle="pill" data-bs-target="#advanced" type="button" role="tab">
+                            🔴 Nível Avançado (C1)
                         </button>
                     </div>
                 </div>
 
-                <div class="col-md-8">
+                <div class="col-md-8 col-lg-9">
                     <div class="tab-content" id="level-tabsContent">
 
-                        <!-- NÍVEL BÁSICO -->
-                        <div class="tab-pane fade show active" id="basic" role="tabpanel" aria-labelledby="basic-tab" tabindex="0">
-                            <div class="card border-0 p-4 mb-3">
-                                <h2 class="h4 fw-bold mb-3">Nível Básico – Começar do zero</h2>
-                                <p class="text-secondary mb-3">
-                                    Aqui o objetivo é perceber e usar frases simples do dia a dia.
-                                    Foca-te em cumprimentos, apresentações e vocabulário essencial.
-                                </p>
+                        <div class="tab-pane fade show active" id="basic" role="tabpanel">
+                            <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 bg-white">
+                                <div class="border-bottom pb-3 mb-4">
+                                    <h2 class="h3 fw-bold text-dark">Começar do Zero</h2>
+                                    <p class="text-secondary mb-0 fs-5">Objetivo: Perceber e usar frases simples, cumprimentos e apresentações.</p>
+                                </div>
 
-                                <div class="row g-3">
-                                    <div class="col-sm-6">
-                                        <h3 class="h6 text-uppercase text-muted mb-2">Cumprimentos</h3>
-                                        <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Hallo!</span> – Olá!</li>
-                                            <li><span class="phrase-example">Guten Morgen!</span> – Bom dia!</li>
-                                            <li><span class="phrase-example">Gute Nacht!</span> – Boa noite!</li>
-                                        </ul>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="p-4 bg-light rounded-4 h-100 border">
+                                            <h3 class="h5 fw-bold text-dark mb-4"><i class="bi bi-chat-dots me-2 text-dark"></i>Cumprimentos</h3>
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Hallo!</span> <br> <span class="text-secondary">Olá!</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Guten Morgen!</span> <br> <span class="text-secondary">Bom dia!</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Gute Nacht!</span> <br> <span class="text-secondary">Boa noite!</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <h3 class="h6 text-uppercase text-muted mb-2">Apresentações</h3>
-                                        <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Ich heiße João.</span> – Chamo-me João.</li>
-                                            <li><span class="phrase-example">Ich komme aus Portugal.</span> – Venho de Portugal.</li>
-                                            <li><span class="phrase-example">Freut mich, dich kennenzulernen.</span> – Prazer em conhecer-te.</li>
-                                        </ul>
+                                    <div class="col-md-6">
+                                        <div class="p-4 bg-light rounded-4 h-100 border">
+                                            <h3 class="h5 fw-bold text-dark mb-4"><i class="bi bi-person-badge me-2 text-dark"></i>Apresentações</h3>
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Ich heiße João.</span> <br> <span class="text-secondary">Chamo-me João.</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Ich komme aus Portugal.</span> <br> <span class="text-secondary">Venho de Portugal.</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Freut mich.</span> <br> <span class="text-secondary">Prazer em conhecer-te.</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <hr class="my-3">
-
-                                <p class="small mb-1 fw-semibold">Vocabulário essencial:</p>
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-light">Zahlen · números</span>
-                                    <span class="badge text-bg-light">Wochentage · dias da semana</span>
-                                    <span class="badge text-bg-light">Essen · comida</span>
-                                    <span class="badge text-bg-light">Familie · família</span>
+                                <div class="mt-4">
+                                    <p class="fw-bold mb-2 fs-5">Vocabulário essencial:</p>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-success-subtle text-success-emphasis fs-6 fw-normal px-3 py-2 border border-success-subtle">Zahlen (números)</span>
+                                        <span class="badge bg-success-subtle text-success-emphasis fs-6 fw-normal px-3 py-2 border border-success-subtle">Wochentage (dias)</span>
+                                        <span class="badge bg-success-subtle text-success-emphasis fs-6 fw-normal px-3 py-2 border border-success-subtle">Essen (comida)</span>
+                                        <span class="badge bg-success-subtle text-success-emphasis fs-6 fw-normal px-3 py-2 border border-success-subtle">Familie (família)</span>
+                                    </div>
                                 </div>
-
-                                <p class="small text-muted mb-0">
-                                    Dica: começa por repetir as frases em voz alta e depois tenta
-                                    dizê-las sem olhar para o ecrã.
-                                </p>
                             </div>
                         </div>
 
-                        <!-- NÍVEL INTERMÉDIO -->
-                        <div class="tab-pane fade" id="intermediate" role="tabpanel" aria-labelledby="intermediate-tab" tabindex="0">
-                            <div class="card border-0 p-4 mb-3">
-                                <h2 class="h4 fw-bold mb-3">Nível Intermédio – Ganhar confiança</h2>
-                                <p class="text-secondary mb-3">
-                                    Aqui já consegues manter conversas simples, falar sobre a tua rotina
-                                    e fazer perguntas mais completas.
-                                </p>
+                        <div class="tab-pane fade" id="intermediate" role="tabpanel">
+                            <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 bg-white">
+                                <div class="border-bottom pb-3 mb-4">
+                                    <h2 class="h3 fw-bold text-dark">Ganhar Confiança</h2>
+                                    <p class="text-secondary mb-0 fs-5">Objetivo: Manter conversas, falar da rotina e fazer perguntas.</p>
+                                </div>
 
-                                <div class="row g-3">
-                                    <div class="col-sm-6">
-                                        <h3 class="h6 text-uppercase text-muted mb-2">Falar da rotina</h3>
-                                        <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Ich wache um 7 Uhr auf.</span> – Acordo às 7h.</li>
-                                            <li><span class="phrase-example">Ich fahre mit dem Bus zur Arbeit.</span> – Vou para o trabalho de autocarro.</li>
-                                            <li><span class="phrase-example">Ich lerne jeden Tag Deutsch.</span> – Estudo Alemão todos os dias.</li>
-                                        </ul>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="p-4 bg-light rounded-4 h-100 border">
+                                            <h3 class="h5 fw-bold text-dark mb-4"><i class="bi bi-clock-history me-2 text-dark"></i>Rotina Diária</h3>
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Ich wache um 7 Uhr auf.</span> <br> <span class="text-secondary">Acordo às 7h.</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Ich fahre mit dem Bus.</span> <br> <span class="text-secondary">Vou de autocarro.</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Ich lerne jeden Tag.</span> <br> <span class="text-secondary">Estudo todos os dias.</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <h3 class="h6 text-uppercase text-muted mb-2">Fazer perguntas</h3>
-                                        <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Was machst du beruflich?</span> – O que fazes (profissão)?</li>
-                                            <li><span class="phrase-example">Wo wohnst du?</span> – Onde vives?</li>
-                                            <li><span class="phrase-example">Wie war dein Tag?</span> – Como foi o teu dia?</li>
-                                        </ul>
+                                    <div class="col-md-6">
+                                        <div class="p-4 bg-light rounded-4 h-100 border">
+                                            <h3 class="h5 fw-bold text-dark mb-4"><i class="bi bi-question-circle me-2 text-dark"></i>Perguntas</h3>
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Was machst du?</span> <br> <span class="text-secondary">O que fazes?</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Wo wohnst du?</span> <br> <span class="text-secondary">Onde vives?</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Wie war dein Tag?</span> <br> <span class="text-secondary">Como foi o teu dia?</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <hr class="my-3">
-
-                                <p class="small mb-1 fw-semibold">Gramática que deves rever:</p>
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-light">Präsens (tempo presente)</span>
-                                    <span class="badge text-bg-light">Präteritum / Perfekt (passado)</span>
-                                    <span class="badge text-bg-light">Es gibt / Es gibt nicht</span>
-                                    <span class="badge text-bg-light">Artigos definidos e indefinidos</span>
+                                <div class="mt-4">
+                                    <p class="fw-bold mb-2 fs-5">Gramática para rever:</p>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-warning-subtle text-warning-emphasis fs-6 fw-normal px-3 py-2 border border-warning-subtle">Präsens</span>
+                                        <span class="badge bg-warning-subtle text-warning-emphasis fs-6 fw-normal px-3 py-2 border border-warning-subtle">Präteritum / Perfekt</span>
+                                        <span class="badge bg-warning-subtle text-warning-emphasis fs-6 fw-normal px-3 py-2 border border-warning-subtle">Es gibt (há)</span>
+                                    </div>
                                 </div>
-
-                                <p class="small text-muted mb-0">
-                                    Dica: tenta escrever um pequeno parágrafo sobre o teu dia
-                                    usando estas estruturas, e depois pratica nos quizzes.
-                                </p>
                             </div>
                         </div>
 
-                        <!-- NÍVEL AVANÇADO -->
-                        <div class="tab-pane fade" id="advanced" role="tabpanel" aria-labelledby="advanced-tab" tabindex="0">
-                            <div class="card border-0 p-4 mb-3">
-                                <h2 class="h4 fw-bold mb-3">Nível Avançado – Soar mais natural</h2>
-                                <p class="text-secondary mb-3">
-                                    Neste nível o objetivo é deixar o alemão mais fluido e natural,
-                                    com expressões, conectores e frases mais complexas.
-                                </p>
+                        <div class="tab-pane fade" id="advanced" role="tabpanel">
+                            <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 bg-white">
+                                <div class="border-bottom pb-3 mb-4">
+                                    <h2 class="h3 fw-bold text-dark">Fluidez e Naturalidade</h2>
+                                    <p class="text-secondary mb-0 fs-5">Objetivo: Usar expressões, conectores e expressar opiniões complexas.</p>
+                                </div>
 
-                                <div class="row g-3">
-                                    <div class="col-sm-6">
-                                        <h3 class="h6 text-uppercase text-muted mb-2">Expressões úteis</h3>
-                                        <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Um ehrlich zu sein...</span> – Para ser sincero...</li>
-                                            <li><span class="phrase-example">Es kommt darauf an.</span> – Depende.</li>
-                                            <li><span class="phrase-example">Ich freue mich darauf.</span> – Estou ansioso por isso.</li>
-                                        </ul>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="p-4 bg-light rounded-4 h-100 border">
+                                            <h3 class="h5 fw-bold text-dark mb-4"><i class="bi bi-stars me-2 text-dark"></i>Expressões Úteis</h3>
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Um ehrlich zu sein...</span> <br> <span class="text-secondary">Para ser sincero...</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Es kommt darauf an.</span> <br> <span class="text-secondary">Depende.</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Ich freue mich darauf.</span> <br> <span class="text-secondary">Estou ansioso por isso.</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <h3 class="h6 text-uppercase text-muted mb-2">Ligar ideias</h3>
-                                        <ul class="list-unstyled small mb-0">
-                                            <li><span class="phrase-example">Allerdings,</span> – No entanto,</li>
-                                            <li><span class="phrase-example">Auf der anderen Seite,</span> – Por outro lado,</li>
-                                            <li><span class="phrase-example">Meiner Meinung nach,</span> – Na minha opinião,</li>
-                                        </ul>
+                                    <div class="col-md-6">
+                                        <div class="p-4 bg-light rounded-4 h-100 border">
+                                            <h3 class="h5 fw-bold text-dark mb-4"><i class="bi bi-link-45deg me-2 text-dark"></i>Conectores</h3>
+                                            <ul class="list-unstyled mb-0">
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Allerdings,</span> <br> <span class="text-secondary">No entanto,</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Auf der anderen Seite,</span> <br> <span class="text-secondary">Por outro lado,</span></li>
+                                                <li class="mb-3 fs-5"><span class="fw-bold text-primary">Meiner Meinung nach,</span> <br> <span class="text-secondary">Na minha opinião,</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <hr class="my-3">
-
-                                <p class="small mb-1 fw-semibold">O que deves praticar mais:</p>
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge text-bg-light">Listening com séries / vídeos em alemão</span>
-                                    <span class="badge text-bg-light">Writing de pequenos textos</span>
-                                    <span class="badge text-bg-light">Vocabulário de temas específicos</span>
+                                <div class="mt-4">
+                                    <p class="fw-bold mb-2 fs-5">Praticar mais:</p>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-danger-subtle text-danger-emphasis fs-6 fw-normal px-3 py-2 border border-danger-subtle">Listening (Séries)</span>
+                                        <span class="badge bg-danger-subtle text-danger-emphasis fs-6 fw-normal px-3 py-2 border border-danger-subtle">Writing (Ensaios)</span>
+                                    </div>
                                 </div>
-
-                                <p class="small text-muted mb-0">
-                                    Dica: tenta explicar uma opinião tua em alemão (sobre um filme, jogo,
-                                    escola, etc.) usando conectores como <em>allerdings</em>, <em>weil</em>,
-                                    <em>obwohl</em>.
-                                </p>
                             </div>
                         </div>
 
@@ -207,58 +195,56 @@
             </div>
         </section>
 
-        <section id="tips" class="content mb-5">
-            <h2 class="h4 fw-bold mb-3">Dicas rápidas para aprender sem ser chato</h2>
+        <section id="tips" class="mb-5">
+            <h2 class="h4 fw-bold mb-4 text-center">Dicas rápidas para aprender melhor</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="card p-3 h-100">
-                        <h3 class="h6 fw-bold mb-2">1. Pequenas metas diárias</h3>
-                        <p class="small text-secondary mb-0">
-                            Estuda 5 a 10 minutos por dia. Faz um quiz, revê 5 frases,
-                            ou aprende 3 novas palavras. O importante é a consistência.
-                        </p>
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white rounded-4">
+                        <div class="mb-3">
+                            <i class="bi bi-calendar-check text-primary" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h3 class="h5 fw-bold">Metas Diárias</h3>
+                        <p class="text-muted fs-6">Estuda 5 a 10 minutos por dia. A consistência bate a intensidade.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card p-3 h-100">
-                        <h3 class="h6 fw-bold mb-2">2. Usa frases, não só palavras</h3>
-                        <p class="small text-secondary mb-0">
-                            Em vez de decorar só um verbo, decora a frase:
-                            <span class="phrase-example">Ich fahre mit dem Bus zur Schule.</span>
-                            Vais lembrar melhor o significado e a estrutura.
-                        </p>
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white rounded-4">
+                        <div class="mb-3">
+                            <i class="bi bi-chat-quote text-success" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h3 class="h5 fw-bold">Frases > Palavras</h3>
+                        <p class="text-muted fs-6">Decora "Ich fahre mit dem Bus" em vez de palavras soltas.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card p-3 h-100">
-                        <h3 class="h6 fw-bold mb-2">3. Repete em voz alta</h3>
-                        <p class="small text-secondary mb-0">
-                            Lê as frases em voz alta como se estivesses a falar com alguém.
-                            A pronúncia e a confiança melhoram muito mais rápido assim.
-                        </p>
+                    <div class="card border-0 shadow-sm h-100 text-center p-4 bg-white rounded-4">
+                        <div class="mb-3">
+                            <i class="bi bi-mic text-danger" style="font-size: 2.5rem;"></i>
+                        </div>
+                        <h3 class="h5 fw-bold">Voz Alta</h3>
+                        <p class="text-muted fs-6">Lê tudo em voz alta. A tua pronúncia e confiança vão agradecer.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="text-center mb-4">
-            <div class="card border-0 p-4 p-md-5 mx-auto" style="max-width: 720px;">
-                <h2 class="h4 fw-bold mb-2">Pronto para praticar?</h2>
-                <p class="text-secondary mb-3">
-                    Agora que já tens uma visão geral dos níveis, é hora de pôr em prática
-                    com os quizzes de Alemão do Polyglot Play.
+        <section class="text-center py-5">
+            <div class="card border-0 bg-primary text-white p-5 rounded-4 mx-auto shadow" style="max-width: 800px;">
+                <h2 class="h3 fw-bold mb-3">Sentes-te preparado?</h2>
+                <p class="lead mb-4 opacity-75">
+                    Agora que já reviste a matéria, está na hora de testar os teus conhecimentos.
                 </p>
-                <a href="../quizz/quiz_al1.php" class="btn btn-primary btn-lg rounded-3 px-4">
-                    Ir para os quizzes de Alemão
-                </a>
+                <div>
+                    <a href="../quizzes.php" class="btn btn-light btn-lg rounded-pill px-5 fw-bold text-dark shadow-sm">
+                        Ir para os Quizzes
+                    </a>
+                </div>
             </div>
         </section>
+
     </main>
 
-    <?php 
-        require('../includes/footer.php');
-    ?>
-
+    <?php require('../includes/footer.php'); ?>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
