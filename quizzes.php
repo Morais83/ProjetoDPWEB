@@ -42,7 +42,7 @@
                         class="lang-card dropdown-toggle text-decoration-none text-reset border-0 bg-white"
                         type="button"
                         data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
+                        data-bs-popper-config='{"modifiers":[{"name":"flip","enabled":false}]}'
                         aria-expanded="false">
                         <div class="flag" style="background-image:url('imgs/uk.png');"></div>
                         <p>Inglês</p>
@@ -62,7 +62,7 @@
                         class="lang-card dropdown-toggle text-decoration-none text-reset border-0 bg-white"
                         type="button"
                         data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
+                        data-bs-popper-config='{"modifiers":[{"name":"flip","enabled":false}]}'
                         aria-expanded="false">
                         <div class="flag" style="background-image:url('imgs/fr.png');"></div>
                         <p>Francês</p>
@@ -82,7 +82,7 @@
                         class="lang-card dropdown-toggle text-decoration-none text-reset border-0 bg-white"
                         type="button"
                         data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
+                        data-bs-popper-config='{"modifiers":[{"name":"flip","enabled":false}]}'
                         aria-expanded="false">
                         <div class="flag" style="background-image:url('imgs/es.png');"></div>
                         <p>Espanhol</p>
@@ -102,7 +102,7 @@
                         class="lang-card dropdown-toggle text-decoration-none text-reset border-0 bg-white"
                         type="button"
                         data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
+                        data-bs-popper-config='{"modifiers":[{"name":"flip","enabled":false}]}'
                         aria-expanded="false">
                         <div class="flag" style="background-image:url('imgs/al.png');"></div>
                         <p>Alemão</p>
@@ -122,7 +122,7 @@
                         class="lang-card dropdown-toggle text-decoration-none text-reset border-0 bg-white"
                         type="button"
                         data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
+                        data-bs-popper-config='{"modifiers":[{"name":"flip","enabled":false}]}'
                         aria-expanded="false">
                         <div class="flag" style="background-image:url('imgs/bandeiras.png');"></div>
                         <p>Brevemente</p>
@@ -142,7 +142,7 @@
                         class="lang-card dropdown-toggle text-decoration-none text-reset border-0 bg-white"
                         type="button"
                         data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
+                        data-bs-popper-config='{"modifiers":[{"name":"flip","enabled":false}]}'
                         aria-expanded="false">
                         <div class="flag" style="background-image:url('imgs/bandeiras.png');"></div>
                         <p>Brevemente</p>
@@ -162,7 +162,7 @@
                         class="lang-card dropdown-toggle text-decoration-none text-reset border-0 bg-white"
                         type="button"
                         data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
+                        data-bs-popper-config='{"modifiers":[{"name":"flip","enabled":false}]}'
                         aria-expanded="false">
                         <div class="flag" style="background-image:url('imgs/bandeiras.png');"></div>
                         <p>Brevemente</p>
@@ -182,7 +182,7 @@
                         class="lang-card dropdown-toggle text-decoration-none text-reset border-0 bg-white"
                         type="button"
                         data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside"
+                        data-bs-popper-config='{"modifiers":[{"name":"flip","enabled":false}]}'
                         aria-expanded="false">
                         <div class="flag" style="background-image:url('imgs/bandeiras.png');"></div>
                         <p>Brevemente</p>

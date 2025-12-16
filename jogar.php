@@ -163,6 +163,16 @@
                 });
 
                 result.textContent = `Acertaste ${score} de ${total} perguntas.`;
+                const formData = new FormData();
+                formData.append('idioma', '<?php echo $idioma; ?>');
+                formData.append('nivel', '<?php echo $nivel; ?>');
+                formData.append('certas', score);
+                formData.append('erradas', total - score);
+
+                fetch('salvar.php', {
+                    method: 'POST',
+                    body: formData
+                }).then(response => console.log('Resultado salvo!'));
                 
                 next.hidden = false; 
                 next.scrollIntoView({behavior: "smooth"});

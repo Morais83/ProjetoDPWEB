@@ -26,8 +26,8 @@
 
                 <form action="processa_login.php" method="post">
                 <div class="mb-3 text-start">
-                    <label for="username" class="form-label fw-semibold">Nome de utilizador ou E-mail:</label>
-                    <input id="username" name="username" type="text"
+                    <label for="utilizador" class="form-label fw-semibold">Nome de utilizador ou E-mail:</label>
+                    <input id="utilizador" name="utilizador" type="text"
                         class="form-control border-2 rounded-3"
                         placeholder="utilizador@gmail.com" required>
                 </div>

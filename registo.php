@@ -26,8 +26,8 @@
 
         <form action="processa_registo.php" method="post">
           <div class="mb-3 text-start">
-            <label for="username" class="form-label fw-semibold">Nome de usuário:</label>
-            <input type="text" id="username" name="username"
+            <label for="utilizador" class="form-label fw-semibold">Nome de usuário:</label>
+            <input type="text" id="utilizador" name="utilizador"
                    class="form-control border-2 rounded-3"
                    placeholder="Ex: joaomorais" required>
           </div>
